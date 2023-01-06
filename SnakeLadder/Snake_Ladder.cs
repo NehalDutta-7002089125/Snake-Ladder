@@ -13,7 +13,7 @@ namespace SnakeLadder
             int check=obj.Next(0,7);
             if(check==0)
             {
-                Console.WriteLine("You are in start position");
+                Console.WriteLine("Sorry, You are in the start position");
             }
              else
             {
