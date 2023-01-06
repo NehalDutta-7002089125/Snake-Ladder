@@ -8,17 +8,27 @@ namespace SnakeLadder
     {
         public static void dice()
         {
-            Console.WriteLine("Roll the dice");
+            int p = 0;
             Random obj= new Random();
             int check=obj.Next(0,7);
-            if(check==0)
+            Console.WriteLine("you have got {0} ",check);
+            
+            int a=obj.Next(1,3);
+            if (check == 0)
             {
-                Console.WriteLine("You are in start position");
+                Console.WriteLine("You have to stay");
             }
-             else
+           else if (a==1)
             {
-                Console.WriteLine("You have moved to {0}th postition", check);
+                p += check;
+                Console.WriteLine("Congratulation, Step the ladder by getting"+ p);
             }
+            else
+            {
+                p -= check;
+                Console.WriteLine("Sorry, it's snake step dowen by getting"+ p);
+            }
+             
         }
     }
 }
